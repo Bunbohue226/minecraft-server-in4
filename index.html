@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thông Tin Server</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: white;
+      padding: 40px;
+    }
+    .server-info {
+      background: #1e1e1e;
+      padding: 30px;
+      border: 2px solid #00ffff;
+      border-radius: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .server-info h2 {
+      color: #00ffff;
+      text-align: center;
+      font-size: 28px;
+    }
+    .info-item {
+      margin: 15px 0;
+      font-size: 18px;
+    }
+    .label {
+      font-weight: bold;
+    }
+    .value {
+      color: #ffdd57;
+    }
+    .copy-button {
+      margin-left: 15px;
+      background-color: #00ffff;
+      border: none;
+      color: #000;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .copy-button:hover {
+      background-color: #00cfcf;
+    }
+    .title-note {
+      margin-top: 30px;
+      padding: 15px;
+      background: #2a2a2a;
+      border-left: 5px solid #00ffff;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+    .title-note span {
+      color: #00ffff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="server-info">
+    <h2>THÔNG TIN SERVER</h2>
+
+    <div class="info-item">
+      <span class="label">IP:</span>
+      <span class="value" id="ip">mbasic7.pikamc.vn</span>
+      <button class="copy-button" onclick="copyToClipboard('ip')">Copy</button>
+    </div>
+
+    <div class="info-item">
+      <span class="label">Port:</span>
+      <span class="value" id="port">25660</span>
+      <button class="copy-button" onclick="copyToClipboard('port')">Copy</button>
+    </div>
+
+    <div class="info-item">
+      <span class="label">Loại server:</span>
+      <span class="value" id="type">Minecraft Bedrock Edition</span>
+    </div>
+
+    <!-- Title dưới: Event -->
+ <div class="title-note">
+  <span>[?]</span> Cách vào mục <strong>Event</strong> ngoài 🌿<strong>dirtl</strong>🌿:<br>
+  ➤ <strong>20k</strong> để vào 🪵<strong>wood</strong>🪵<br>
+  ➤ <strong>50k</strong> để vào 🪨<strong>stone</strong>🪨<br>
+  ➤ <strong>100k</strong> để vào 🤺<strong>iron</strong><br>
+  ➤ <strong>200k</strong> để vào 💎<strong>diamond</strong>💎<br>
+  (Các khu vực này nằm trong <strong>Shop</strong> tại Trung tâm hỗ trợ)
+</div>
+
+
+    <!-- Title dưới: Trung tâm hỗ trợ -->
+    <div class="title-note">
+      <span>[?]</span> <strong>Trung tâm hỗ trợ</strong>:<br>
+      ➤ <strong>Shop:</strong> Bấm <em>"Mua🛒"</em> để mua kit hoặc donate.<br>
+      ➤ <strong>Report:</strong> Bấm <em>"Report💢"</em> để báo cáo lỗi hoặc hacker.
+    </div>
+  </div>
+
+  <script>
+    function copyToClipboard(id) {
+      const text = document.getElementById(id).textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        alert(`Đã sao chép: ${text}`);
+      });
+    }
+  </script>
+</body>
+</html>
